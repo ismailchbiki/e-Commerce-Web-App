@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="SearchProductScreen\" />
+    <None Remove="ViewProductScreen\" />
+    <None Remove="PluginInterfaces\" />
+    <None Remove="PluginInterfaces\DataStore\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SearchProductScreen\" />
+    <Folder Include="ViewProductScreen\" />
+    <Folder Include="PluginInterfaces\" />
+    <Folder Include="PluginInterfaces\DataStore\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\eCommerceWebApp.CoreBusiness\eCommerceWebApp.CoreBusiness.csproj" />
+  </ItemGroup>
+</Project>

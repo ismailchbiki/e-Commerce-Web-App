@@ -1,0 +1,38 @@
+﻿@page "/products"
+
+@inject ISearchProduct searchProduct
+@*there are 3 different parts of a razor component:
+    View, State, & Event
+*@
+
+<h3>Search Products</h3>
+<br />
+
+<div>
+    Search:
+    <input type="text" />
+    <button>Search</button>
+    Next step: Implement search bar component (52:09 minute)
+</div>
+
+<br />
+
+<ul>
+    @foreach (Product p in products)
+    {
+        <li>@p.Name</li>
+    }
+</ul>
+
+@code {
+
+    private IEnumerable<Product> products;
+
+    //this method runs when the page is loaded
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+
+        products = searchProduct.Execute("");
+    }
+}
