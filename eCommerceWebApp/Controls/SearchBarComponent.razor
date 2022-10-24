@@ -5,13 +5,12 @@
     <button @onclick="HandleSearch">Search</button>
 </div>
 
-@filter
-
 
 @code {
 
     private string filter;
 
+    //[Parameter] : to make it available in the parent component
     [Parameter]
     public EventCallback<string> OnSearch { get; set; }
 
