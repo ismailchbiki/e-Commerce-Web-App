@@ -1,0 +1,24 @@
+﻿
+<div>
+    Search:
+    <input type="text" @bind-value="filter" />
+    <button @onclick="HandleSearch">Search</button>
+</div>
+
+@filter
+
+
+@code {
+
+    private string filter;
+
+    [Parameter]
+    public EventCallback<string> OnSearch { get; set; }
+
+    private void HandleSearch()
+    {
+        //invoking the method directly
+        OnSearch.InvokeAsync(filter);
+    }
+}
+
