@@ -7,7 +7,7 @@ namespace eCommerceWebApp.UseCases.PluginInterfaces.DataStore
     public interface IProductRepository
     {
         //the implementation of these interfaces is inside the plugin folder
-        IEnumerable<Product> GetProducts(string filter);
+        IEnumerable<Product> GetProducts(string filter = null);
         Product GetProduct(int id);
     }
 }

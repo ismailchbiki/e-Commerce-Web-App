@@ -5,6 +5,6 @@ namespace eCommerceWebApp.UseCases.SearchProductScreen
 {
     public interface ISearchProduct
     {
-        IEnumerable<Product> Execute(string filter);
+        IEnumerable<Product> Execute(string filter = null);
     }
 }

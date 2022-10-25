@@ -1,9 +1,11 @@
-﻿
+﻿@*the products table list*@
 
 @if (Product != null)
 {
     <tr>
-        <td>@Product.Name</td>
+        <NavLink href="@($"product/{Product.Id}")">
+            <td>@Product.Name</td>
+        </NavLink>
         <td>@Product.Brand</td>
         <td>@Product.Price.ToString("c")</td>
     </tr>
